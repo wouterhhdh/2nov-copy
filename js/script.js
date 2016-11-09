@@ -8,6 +8,7 @@ var prev, next;
 var currentPosition = 0;
 var currentImage = 0;
 var itemsOnScreen = 2;
+var animationSpeed = 300;
 init();
 
 function init(){
@@ -28,24 +29,41 @@ function onClickNext(){
 		}
 		else {
 			$(li_items).each(function() {
-				this.style.left = currentPosition - (100/itemsOnScreen) + "%";	
+				$(this).animate({left: currentPosition - (100/itemsOnScreen) + "%"}, animationSpeed);
 			})
 			currentPosition = currentPosition - (100/itemsOnScreen);
-			currentImage = currentImage + 1
+			currentImage = currentImage + 1;
+			checkPosition()
 		};	
 	};
 
 function onClickPrev(){
 		if (currentImage == 0){
+
 		}
 		else {
 			$(li_items).each(function() {
-				this.style.left = currentPosition + (100/itemsOnScreen) + "%";
+				$(this).animate({left: currentPosition + (100/itemsOnScreen) + "%"}, animationSpeed);
 			})
 			currentPosition = currentPosition + (100/itemsOnScreen);
-			currentImage = currentImage - 1
+			currentImage = currentImage - 1;
+			checkPosition()
 		};
 	};
+
+function checkPosition(){
+	if (currentImage == 0){
+		prev.style.display = "none";
+	}
+	else if (currentImage >= imageNumber - itemsOnScreen) {
+		next.style.display = "none"	
+	}
+	else {
+		prev.style.display = "block"
+		next.style.display = "block"
+		
+	}
+}
 
 
 //commit test number two
