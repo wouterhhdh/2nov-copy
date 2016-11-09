@@ -7,7 +7,9 @@ var imageWidth;
 var prev, next;
 var currentPostion = 0;
 var currentImage = 0;
+init();
 
+function init(){
 	ul = document.getElementById('image_slider');
 	li_items = ul.children;
 	imageNumber = li_items.length;
@@ -15,15 +17,17 @@ var currentImage = 0;
 	ul.style.width = imageWidth * imageNumber + 'px';
 	prev = document.getElementById("prev");
 	next = document.getElementById("next");
-	// prev.onclick = function(){ onClickPrev();};
+	prev.onclick = function(){ onClickPrev();};
 	next.onclick = function(){ onClickNext();};
-
+};
 
 
 function onClickNext(){
 	// if (currentImage == imageNumber - 1){
 		// li_items[each].style.left = "-50%";
-		console.log(ul.style.width)
+		$(li_items).each(function() {
+			this.style.left = "-50%";
+		})
 		// slideTo(0);
 	// }		
 	// else{
@@ -34,12 +38,16 @@ function onClickNext(){
 function onClickPrev(){
 	// if (currentImage == imageNumber - 1){
 		// li_items[each].style.left = "-50%";
-		console.log(li_items)
+		// console.log(li_items)
 		// slideTo(0);
 	// }		
 	// else{
 	// 	slideTo(currentImage + 1);
 	// }
+
+		$(li_items).each(function() {
+			this.style.left = "0%";
+		})
 	};
 
 
