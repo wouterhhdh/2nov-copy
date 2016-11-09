@@ -23,37 +23,27 @@ function init(){
 
 
 function onClickNext(){
-	// if (currentImage == imageNumber - 1){
-		// li_items[each].style.left = "-50%";
-		$(li_items).each(function() {
-			this.style.left = currentPosition - 50 + "%";	
-		})
-		currentPosition = currentPosition - 50;
-		currentImage = currentImage - 1
-		// slideTo(0);
-	// }		
-	// else{
-	// 	slideTo(currentImage + 1);
-	// }
+		if (currentImage == imageNumber-2){
+		}
+		else {
+			$(li_items).each(function() {
+				this.style.left = currentPosition - 50 + "%";	
+			})
+			currentPosition = currentPosition - 50;
+			currentImage = currentImage + 1
+		};	
 	};
 
 function onClickPrev(){
-	// if (currentImage == imageNumber - 1){
-		// li_items[each].style.left = "-50%";
-		// console.log(li_items)
-		// slideTo(0);
-	// }		
-	// else{
-	// 	slideTo(currentImage + 1);
-	// }
-
-		$(li_items).each(function() {
-			// console.log(currentPostion)
-			this.style.left = currentPosition + 50 + "%";
-		})
-		currentPosition = currentPosition + 50;
-		currentImage = currentImage + 1
-
+		if (currentImage == 0){
+		}
+		else {
+			$(li_items).each(function() {
+				this.style.left = currentPosition + 50 + "%";
+			})
+			currentPosition = currentPosition + 50;
+			currentImage = currentImage - 1
+		};
 	};
 
 
