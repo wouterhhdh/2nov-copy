@@ -114,6 +114,10 @@ ul.menu {
 	}
 
 
+ul.personlist {
+	width: 100%;
+	overflow: hidden;
+}
 li.person, .personlist {
 	position: relative;
 	display: flex;
