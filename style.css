@@ -80,6 +80,8 @@ ul.menu {
 	display: flex;
 	position: relative;
 	}
+
+/* story content */
 /* 
 .imgcont.one {background: url(img/img1.jpg) center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 .imgcont.two {background: url(img/img2.jpg) center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
@@ -91,7 +93,6 @@ ul.menu {
 .imgcont {
 	width: 55%;
 	background-color: #333;
-	/* background: url(img/img1.jpg); */
 	}
 
 .txtcont {
@@ -113,7 +114,13 @@ ul.menu {
 	background-color: #E14739;
 	}
 
+.btmbnr {
+	width: 100%;
+	padding-bottom: 43%;
+}
 
+
+/* image slider */
 ul.personlist {
 	width: 100%;
 	overflow: hidden;
@@ -159,3 +166,12 @@ li.person .profile {
 	right: 0px;
 	bottom: 0px;
 	}
+
+/* footer */
+footer {
+	width: 100%;
+	margin: 0;
+	padding: 7% 0;
+	background-color: red;
+}
+
