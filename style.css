@@ -173,5 +173,14 @@ footer {
 	margin: 0;
 	padding: 7% 0;
 	background-color: red;
+	display: flex;
+	justify-content: space-around;
+	}
+
+.adress, .newsletter, .social {
+	display: flex;
+	height: 30px;
+	background-color: yellow;
+
 }
 
