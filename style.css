@@ -3,6 +3,10 @@ html, body, ul, li {
 	padding: 0;
 	}
 
+ul {
+	list-style: none;
+}
+
 body {
 	background-color: #F4F3F0;
 	}
@@ -19,7 +23,7 @@ h3 {
 	font-size: 1.8em;
 	}
 
-p {
+p, li {
 	color: #023C5A;
 	font-family:  'Roboto', sans-serif;
 	font-size:  18px;
@@ -169,18 +173,38 @@ li.person .profile {
 
 /* footer */
 footer {
-	width: 100%;
+	width: 86%;
 	margin: 0;
-	padding: 7% 0;
-	background-color: red;
+	padding: 7%;
+	background-color: #1D1D1B;
 	display: flex;
 	justify-content: space-around;
 	}
 
 .adress, .newsletter, .social {
-	display: flex;
-	height: 30px;
-	background-color: yellow;
+	max-width: 30%;
+
+}
+footer h2 {font-size:1.5em}
+footer p {font-size: 0.8em;
+	color: white;}
+footer li{
+	font-size: 0.8em;
+	color: white;
+	margin-bottom: 0;
+}
+
+form {
+	display: block;
+	width: 100%;
+}
+form input {
+	width: 75%;
+	margin: 0;
+	padding: 0;
+}
+form button {
+	width: 20%;
 
 }
 
