@@ -5,7 +5,7 @@ var li_items;
 var imageNumber;
 var imageWidth;
 var prev, next;
-var currentPostion = 0;
+var currentPosition = 0;
 var currentImage = 0;
 init();
 
@@ -26,8 +26,10 @@ function onClickNext(){
 	// if (currentImage == imageNumber - 1){
 		// li_items[each].style.left = "-50%";
 		$(li_items).each(function() {
-			this.style.left = "-50%";
+			this.style.left = currentPosition - 50 + "%";	
 		})
+		currentPosition = currentPosition - 50;
+		currentImage = currentImage - 1
 		// slideTo(0);
 	// }		
 	// else{
@@ -46,8 +48,12 @@ function onClickPrev(){
 	// }
 
 		$(li_items).each(function() {
-			this.style.left = "0%";
+			// console.log(currentPostion)
+			this.style.left = currentPosition + 50 + "%";
 		})
+		currentPosition = currentPosition + 50;
+		currentImage = currentImage + 1
+
 	};
 
 
