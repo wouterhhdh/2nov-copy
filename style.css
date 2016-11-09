@@ -114,6 +114,10 @@ ul.menu {
 	}
 
 
+ul.personlist {
+	width: 100%;
+	overflow: hidden;
+}
 li.person, .personlist {
 	position: relative;
 	display: flex;
@@ -147,6 +151,7 @@ li.person .profile {
 	position: absolute;
 	left: 0px;
 	bottom: 0px;
+	display: none;
 	}
 
 #next {
