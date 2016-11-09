@@ -7,6 +7,7 @@ var imageWidth;
 var prev, next;
 var currentPosition = 0;
 var currentImage = 0;
+var itemsOnScreen = 2;
 init();
 
 function init(){
@@ -23,13 +24,13 @@ function init(){
 
 
 function onClickNext(){
-		if (currentImage == imageNumber-2){
+		if (currentImage == imageNumber - itemsOnScreen){
 		}
 		else {
 			$(li_items).each(function() {
-				this.style.left = currentPosition - 50 + "%";	
+				this.style.left = currentPosition - (100/itemsOnScreen) + "%";	
 			})
-			currentPosition = currentPosition - 50;
+			currentPosition = currentPosition - (100/itemsOnScreen);
 			currentImage = currentImage + 1
 		};	
 	};
@@ -39,9 +40,9 @@ function onClickPrev(){
 		}
 		else {
 			$(li_items).each(function() {
-				this.style.left = currentPosition + 50 + "%";
+				this.style.left = currentPosition + (100/itemsOnScreen) + "%";
 			})
-			currentPosition = currentPosition + 50;
+			currentPosition = currentPosition + (100/itemsOnScreen);
 			currentImage = currentImage - 1
 		};
 	};
