@@ -31,6 +31,17 @@ function onClickNext(){
 	// }
 	};
 
+function onClickPrev(){
+	// if (currentImage == imageNumber - 1){
+		// li_items[each].style.left = "-50%";
+		console.log(li_items)
+		// slideTo(0);
+	// }		
+	// else{
+	// 	slideTo(currentImage + 1);
+	// }
+	};
+
 
 
 
