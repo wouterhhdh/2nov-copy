@@ -65,7 +65,5 @@ function checkPosition(){
 	}
 }
 
-
-//commit test number two
-
+// blabla
 
