@@ -63,7 +63,7 @@ function checkPosition(){
 		next.style.display = "block"
 		
 	}
-}
+} 
 
-// blabla
+
 
